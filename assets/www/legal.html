@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Legal</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+         <!-- don't need to include css or js in subsequent files because 
+             jquery Mobile loads all pages into one page -->
+    </head>
+    <body>
+        <div data-theme="a" data-role="page" id="legal">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    GBG Driver Challenge
+                </h3>
+            </div>
+            <div data-role="content">
+                 <form action="dashboard.html">
+                    <p>Data sharing</p> 
+                    <div data-role="fieldcontain" align="center">
+                        <fieldset data-role="controlgroup">
+                            <label for="shareData">
+                            </label>
+                            <select name="toggleswitch1" id="shareData" data-role="slider">
+                                <option value="off">
+                                    Off
+                                </option>
+                                <option value="on">
+                                    On
+                                </option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    
+                     <p>Green Button Gamer can share your data with specific agencies, vendors, and governmental departments to offer you future saving, discounts, etc.</p> 
+                    
+                     <div id="checkboxes1" data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="vertical">
+                            <legend>
+                            </legend>
+                            <input id="social" name="" type="checkbox">
+                            <label for="social">
+                                Facebook, Twitter, Etc
+                            </label>
+                            <input id="doe" name="" type="checkbox">
+                            <label for="doe">
+                                Department of Transportation
+                            </label>
+                            <input id="localCity" name="" type="checkbox">
+                            <label for="localCity">
+                                Local City (police, municipalities, traffic planning, etc,)
+                            </label>
+                            <input id="autoVendors" name="" type="checkbox">
+                            <label for="autoVendors">
+                                Auto vendors and manufacturers
+                            </label>
+                        </fieldset>
+                    </div>
+                     
+                    <input type="submit" value="No Thanks">
+                    <input type="submit" value="Continue">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

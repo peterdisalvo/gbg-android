@@ -1,0 +1,44 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+         <div data-theme="a" data-role="page" id="selectSampleDataSet">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Sample Data Sets
+                </h3>
+            </div>
+            <div data-role="content">
+                <a data-location="startWatch" data-role="button" href="currentDrive.html">
+                    Commuter
+                </a>
+                <a data-location="startWatch" data-role="button" href="currentDrive.html">
+                    Hard Brakes
+                </a>
+                <a data-location="startWatch" data-role="button" href="currentDrive.html">
+                    Speedy
+                </a>
+                <a data-location="startWatch" data-role="button" href="currentDrive.html">
+                    Racer
+                </a>
+            </div>
+             
+             <script type="text/javascript">
+                 $(function(){                   
+                    $('[data-location="startWatch"]').click(function(){
+                        //user is starting drive sign up for geolocation services.
+                        locationWatchId = navigator.geolocation.watchPosition(reportLocation, onError, { enableHighAccuracy: true });
+                        navigator.geolocation.getCurrentPosition(startLocation, onError,{ enableHighAccuracy: true });
+                    });
+                });
+             </script>
+        </div>
+    </body>
+</html>

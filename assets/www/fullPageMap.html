@@ -1,0 +1,36 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div data-theme="a" data-role="page" id="fullPageMap">
+            <div id="fullPageMap-Content" data-role="content">
+                 <div id="map_canvas"></div>
+                 <div id='debug-location' class="debug-locaiton">
+                    <span id="geolocationlat"></span> Lat:
+                    <span id="geolocationlong"></span> Long:
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function() {
+                    if (DEBUG) {
+                        $('#debug-location').show();
+                    }
+                    else {
+                        $('#debug-location').hide();
+                    }
+
+                    $('[data-location="endWatch"]').click(function() {
+                        clearWatch();
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>
