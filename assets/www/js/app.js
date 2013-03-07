@@ -17,6 +17,8 @@ var currentLocation;
 var map;
 var mapMarkersArray = [];
 
+
+
 $('#fullPageMap').live('pageshow', function(event) {
     //Have to use this otherwise map is wrong size 
     //and the map.setCenter function will be off.
