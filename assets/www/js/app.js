@@ -24,6 +24,29 @@ $('#fullPageMap').live('pageshow', function(event) {
     google.maps.event.trigger(map, 'resize');
 });
 
+$('#selectSampleDataSet').live('pageshow', function(event) {
+	$('[data-geolocation="startWatch"]').click(function(){
+	    //user is starting drive sign up for geolocation services.
+		startWatch();
+	});
+});
+
+$('#dashboard').live('pageshow', function(event) {
+	$('[data-geolocation="startWatch"]').click(function(){
+	    //user is starting drive sign up for geolocation services.
+		startWatch();
+	});
+});
+
+$('#endDriveDialog').live('pageshow', function(event) {
+	$('[data-geolocation="stopWatch"]').click(function(){
+	    //user is starting drive sign up for geolocation services.
+		clearWatch();
+	});
+});
+
+
+
 function initializeMap() {
     
     var location;
@@ -89,15 +112,29 @@ function onError(error) {
             'message: ' + error.message + '\n');
 }
 
+//Watch
+
+
+$('[data-geolocation="stopWatch"]').click(function(){
+	clearWatch();
+});
+
+//Start watch
+function startWatch() {
+	locationWatchId = navigator.geolocation.watchPosition(reportLocation, onError, { enableHighAccuracy: true });
+    navigator.geolocation.getCurrentPosition(startLocation, onError,{ enableHighAccuracy: true });
+}
+
 // clear the watch that was started earlier
-// 
 function clearWatch() {
     endTime = moment();
-    if (watchID != null) {
+    if (locationWatchId != null) {
         navigator.geolocation.clearWatch(locationWatchId);
-        watchID = null;
+        locationWatchId = null;
     }
 }
+
+
 
 function addMarker(location, title) {
     marker = new google.maps.Marker({

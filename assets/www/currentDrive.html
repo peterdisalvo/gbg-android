@@ -15,6 +15,8 @@ and open the template in the editor.
                     Current Drive
                 </h3>
                 
+               <!-- 
+               		to add menu to header uncomment here.
                 <a class="ui-btn-right ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-a" 
                    data-iconpos="notext" data-theme="a" data-role="button" data-icon="grid" title=" Navigation"
                    href="fullPageMap.html">
@@ -22,17 +24,17 @@ and open the template in the editor.
 				<span class="ui-btn-text"> Map </span>
 				<span data-form="ui-icon" class="ui-icon ui-icon-grid ui-icon-shadow"></span>
 			</span>
-		</a>
+		</a>--> 
             </div>
             <div data-role="content">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a data-location="endWatch" data-role="button" href="dashboard.html">
+                        <a id="currentdrive-end" data-location="endWatch" data-rel="dialog" data-role="button" href="endDriveDialog.html">
                             End Drive
                         </a>
                     </div>
                     <div class="ui-block-b">
-                        <a data-role="button" href="dashboard.html">
+                        <a data-role="button" href="fullPageMap.html">
                             Map
                         </a>
                     </div>
@@ -108,7 +110,8 @@ and open the template in the editor.
                 </ul>
 
             </div>
+            
         </div>
-
+       
     </body>
 </html>
