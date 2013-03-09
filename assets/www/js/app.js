@@ -18,14 +18,6 @@ var map;
 var mapMarkersArray = [];
 
 
-
-$('#fullPageMap').live('pageshow', function(event) {
-    //Have to use this otherwise map is wrong size 
-    //and the map.setCenter function will be off.
-    initializeMap();
-    google.maps.event.trigger(map, 'resize');
-});
-
 $('#selectSampleDataSet').live('pageshow', function(event) {
 	$('[data-geolocation="startWatch"]').click(function(){
 	    //user is starting drive sign up for geolocation services.
@@ -47,37 +39,6 @@ $('#endDriveDialog').live('pageshow', function(event) {
 	});
 });
 
-
-
-function initializeMap() {
-    
-    var location;
-    if (!currentLocation){
-        location = new google.maps.LatLng(43.661471, -70.255326);
-    }else
-    {
-        location = currentLocation;
-    }
-    var mapOptions = {
-        //Portland maine is starting point
-        center: location,
-        zoom: 14,
-        mapTypeControl: false,
-        streetViewControl: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
-};
-
-function startLocation(position) {
-    startTime = moment();
-    startLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    addMarker(startLocation, "Start Location")
-    google.maps.event.trigger(map, 'resize');
-    map.setCenter(startLocation);
-}
-
 function reportLocation(position) {
     //http://docs.phonegap.com/en/2.4.0/cordova_geolocation_geolocation.md.html#Geolocation
 
@@ -85,7 +46,7 @@ function reportLocation(position) {
     var speed = 0;
     if (position.coords.speed != null) {
         //Speed is in meters per second
-        speed = position.coords.speed * 2.2369;
+        speed = Math.round( position.coords.speed * 2.2369);
     }
     $('#geolocationCurrentSpeed').html(speed);
 
@@ -98,13 +59,6 @@ function reportLocation(position) {
     var tripTime = moment().diff(startTime, 'minutes', true)
     tripTime = Math.round(tripTime) 
     $('#geolocationTripTime').html(tripTime);
-
-    //Update Map
-    currentLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    $('#geolocationlat').html(currentLocation.lat());
-    $('#geolocationlong').html(currentLocation.lng());
-    currentDrive.push(currentLocation);
-    map.panTo(currentLocation);
 }
 
 // onError Callback receives a PositionError object
@@ -134,15 +88,4 @@ function clearWatch() {
         navigator.geolocation.clearWatch(locationWatchId);
         locationWatchId = null;
     }
-}
-
-
-
-function addMarker(location, title) {
-    marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: title
-    });
-    mapMarkersArray.push(marker);
 }
