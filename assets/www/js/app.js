@@ -56,8 +56,17 @@ function reportLocation(position) {
     }
 
     //Update Driving Time
-    var tripTime = moment().diff(startTime, 'minutes', true)
-    tripTime = Math.round(tripTime) 
+    if (!startTime)
+	{
+    	startTime = moment();
+    	console.log('initial start time: ' + startTime.format("MMM Do YY"));
+	}
+    
+    console.log('start time: ' + startTime.format("MMM Do YY"));
+    var now = moment();
+    console.log('now: ' + startTime.format("MMM Do YY"));
+    var tripTime = now.diff(startTime, 'minutes', true);
+    console.log("triptime: " + tripTime);
     $('#geolocationTripTime').html(tripTime);
 }
 
