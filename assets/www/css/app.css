@@ -1,6 +1,11 @@
 root { 
     display: block;
 }
+
+.italics{
+	font-style: italic;
+}
+
 #fullPageMap
 {
     width:100%;
@@ -16,6 +21,8 @@ root {
     width: 100%;
     height:100%;
 }
+
+/* CURRENT DRIVE */
 
 .drive-stat{
     width: 100%;
@@ -45,6 +52,30 @@ root {
     right:10px;
     font-size: 1.4em;
 }
+
+/* DRIVE RESULTS */
+.drive-result img {
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.drive-result > div{
+	text-align: center;
+}
+
+.center{
+	text-align: center;
+}
+
+.my-score, .oppenent-score{
+	position: relative;
+    top:50%;
+    margin-top: 16px;
+    font-size: 1.4em;
+}
+
+
+/* DASHBOARD */
 
 #dashboard-challenges li p.opponent{
     font-size: 1.4em;
