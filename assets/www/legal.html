@@ -10,17 +10,20 @@
         <div data-theme="a" data-role="page" id="legal">
             <div data-theme="a" data-role="header">
                 <h3>
-                    GBG Driver Challenge
+                    Legal
                 </h3>
             </div>
             <div data-role="content">
                  <form action="dashboard.html">
-                    <p>Data sharing</p> 
+                    <div class="center">
+                    <H3>Data sharing</h3>
+                    <p>Sharing your data is up to you.</p>
+                    </div>  
                     <div data-role="fieldcontain" align="center">
                         <fieldset data-role="controlgroup">
                             <label for="shareData">
                             </label>
-                            <select name="toggleswitch1" id="shareData" data-role="slider">
+                            <select  id="shareData" data-role="slider">
                                 <option value="off">
                                     Off
                                 </option>
@@ -47,7 +50,7 @@
                             </label>
                             <input id="localCity" name="" type="checkbox">
                             <label for="localCity">
-                                Local City (police, municipalities, traffic planning, etc,)
+                                Local City (traffic planning, etc)
                             </label>
                             <input id="autoVendors" name="" type="checkbox">
                             <label for="autoVendors">
@@ -60,6 +63,23 @@
                     <input type="submit" value="Continue">
                 </form>
             </div>
-        </div>
+            
+            <script type="text/javascript">
+             		$( "#shareData" ).on( "slidestop", function( event, ui ) {
+             			if (event.target.value === "on"){
+             				$('#social').prop('checked',true).checkboxradio('refresh');
+             				$('#doe').prop('checked',true).checkboxradio('refresh');
+             				$('#localCity').prop('checked',true).checkboxradio('refresh');
+             				$('#autoVendors').prop('checked',true).checkboxradio('refresh');       			
+             			}
+             			else{
+             				$('#social').prop('checked', false).checkboxradio('refresh');
+             				$('#doe').prop('checked', false).checkboxradio('refresh');
+             				$('#localCity').prop('checked', false).checkboxradio('refresh');
+             				$('#autoVendors').prop('checked', false).checkboxradio('refresh');       		
+             			}
+             		} );
+            </script>        
+            </div>
     </body>
 </html>
