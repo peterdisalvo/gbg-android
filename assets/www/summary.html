@@ -4,115 +4,104 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <div data-theme="a" data-role="page" id="summary">
-            <div data-theme="a" data-role="header">
-                <h3>
-                    My Summary
-                </h3>
-            </div>
-            <div data-role="content">
-                <div data-role="fieldcontain">
-                    <label for="selectmenu1">
-                    </label>
-                    <select name="">
-                        <option value="January">
-                            January
-                        </option>
-                        <option value="value">
-                            February
-                        </option>
-                        <option value="value">
-                            March
-                        </option>
-                    </select>
-                </div>
-                <h2>
-                    Totals
-                </h2>
-                  <ul data-role="listview" data-divider-theme="a" data-inset="true">     
-                     <li data-role="list-divider" role="heading">
-                        Speed
-                    </li>
-                    <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/max-speed.png"/>
-                                <span class="label"> Max Speed</span>
-                                <span class="value">0 MPH</span> 
-                            </div>
-                    </li>
-                     <li data-role="list-divider" role="heading">
-                        Safety
-                    </li>
-                    <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/rapid-accel.png"/>
-                                <span class="label">Rapid Accel Count</span>
-                                <span class="value">5</span> 
-                            </div>
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/speeding-time.png"/>
-                                <span class="label">Speeding Time</span>
-                                <span class="value">0 Minutes</span> 
-                            </div>
-                    </li>
-                    <li data-role="list-divider" role="heading">
-                        Efficency
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/distance-travelled.png"/>
-                                <span class="label"> Distanced Traveled</span>
-                                <span class="value">29 miles</span> 
-                            </div>
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/fuel-efficiency.png"/>
-                                <span class="label">Fuel Efficiency</span>
-                                <span class="value">35 MPG</span> 
-                            </div>
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/fuel-consumed.png"/>
-                                <span class="label"> Fuel Consumed</span>
-                                <span class="value">.75 gals</span> 
-                            </div>
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/trip-time.png"/>
-                                <span class="label"> Trip Time</span>
-                                <span class="value">0 minutes</span> 
-                            </div>
-                    </li>
-                     <li data-role="list-divider" role="heading">
-                        Gaming
-                    </li>
-                    <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/trip-time.png"/>
-                                <span class="label"> Wins</span>
-                                <span class="value">50 </span> 
-                            </div>
-                    </li>
-                     <li data-theme="a">
-                            <div class="drive-stat">
-                                <img src="img/trip-time.png"/>
-                                <span class="label"> Losses</span>
-                                <span class="value">10 </span> 
-                            </div>
-                    </li>
-                     
-                </ul>
-            </div>
-        </div>
-    </body>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<div data-theme="a" data-role="page" id="summary">
+		<div data-theme="a" data-role="header">
+			<h3>My Summary</h3>
+		</div>
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<label for="selectmenu1"> </label> <select name="">
+					<option value="January">January</option>
+					<option value="value">February</option>
+					<option value="value">March</option>
+				</select>
+			</div>
+			<ul data-role="listview" data-divider-theme="a" data-inset="true">
+				<li data-role="list-divider" role="heading">Gaming</li>
+				<li data-theme="a">
+					<div class="drive-stat">
+						<img src="img/trip-time.png" /> <span class="label"> Wins</span>
+						<span class="value">50 </span>
+					</div>
+				</li>
+				<li data-theme="a">
+					<div class="drive-stat">
+						<img src="img/trip-time.png" /> <span class="label">
+							Losses</span> <span class="value">10 </span>
+					</div>
+				</li>
+			</ul>
+			<h2>Totals</h2>
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Speed</h3>
+					<ul data-role="listview" data-divider-theme="a" data-inset="true">
+
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/max-speed.png" /> <span class="label"> Max
+									Speed</span> <span class="value">0 MPH</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Safety</h3>
+					<ul data-role="listview" data-divider-theme="a" data-inset="true">
+
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/rapid-accel.png" /> <span class="label">Rapid
+									Accel Count</span> <span class="value">5</span>
+							</div>
+						</li>
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/speeding-time.png" /> <span class="label">Speeding
+									Time</span> <span class="value">0 Minutes</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Efficency</h3>
+					<ul data-role="listview" data-divider-theme="a" data-inset="true">
+
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/distance-travelled.png" /> <span class="label">
+									Distanced Traveled</span> <span class="value">29 miles</span>
+							</div>
+						</li>
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/fuel-efficiency.png" /> <span class="label">Fuel
+									Efficiency</span> <span class="value">35 MPG</span>
+							</div>
+						</li>
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/fuel-consumed.png" /> <span class="label">
+									Fuel Consumed</span> <span class="value">.75 gals</span>
+							</div>
+						</li>
+						<li data-theme="a">
+							<div class="drive-stat">
+								<img src="img/trip-time.png" /> <span class="label"> Trip
+									Time</span> <span class="value">0 minutes</span>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
 </html>

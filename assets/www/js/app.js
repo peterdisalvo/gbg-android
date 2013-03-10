@@ -64,7 +64,6 @@ function reportLocation(position) {
     
     console.log('start time: ' + startTime.format("MMM Do YY"));
     var now = moment();
-    console.log('now: ' + startTime.format("MMM Do YY"));
     var tripTime = now.diff(startTime, 'minutes');
     console.log("triptime: " + tripTime);
     $('#geolocationTripTime').html(tripTime);
