@@ -15,14 +15,9 @@
             </div>
             <div data-role="content">
                  <form action="dashboard.html">
-                    <div class="center">
-                    <H3>Data sharing</h3>
-                    <p>Sharing your data is up to you.</p>
-                    </div>  
                     <div data-role="fieldcontain" align="center">
                         <fieldset data-role="controlgroup">
-                            <label for="shareData">
-                            </label>
+                            <H2>Data sharing</h2>
                             <select  id="shareData" data-role="slider">
                                 <option value="off">
                                     Off
@@ -34,7 +29,7 @@
                         </fieldset>
                     </div>
                     
-                     <p>Green Button Gamer can share your data with specific agencies, vendors, and governmental departments to offer you future saving, discounts, etc.</p> 
+                     <H2>Green Button Gamer can share your data with specific agencies, vendors and government departments to offer you savings and discounts</H2> 
                     
                      <div id="checkboxes1" data-role="fieldcontain">
                         <fieldset data-role="controlgroup" data-type="vertical">
@@ -42,7 +37,7 @@
                             </legend>
                             <input id="social" name="" type="checkbox">
                             <label for="social">
-                                Facebook, Twitter, Etc
+                                Social Networks
                             </label>
                             <input id="doe" name="" type="checkbox">
                             <label for="doe">
@@ -59,24 +54,26 @@
                         </fieldset>
                     </div>
                      
-                    <input type="submit" value="No Thanks">
                     <input type="submit" value="Continue">
                 </form>
             </div>
             
             <script type="text/javascript">
+           		 	
              		$( "#shareData" ).on( "slidestop", function( event, ui ) {
              			if (event.target.value === "on"){
              				$('#social').prop('checked',true).checkboxradio('refresh');
              				$('#doe').prop('checked',true).checkboxradio('refresh');
              				$('#localCity').prop('checked',true).checkboxradio('refresh');
-             				$('#autoVendors').prop('checked',true).checkboxradio('refresh');       			
+             				$('#autoVendors').prop('checked',true).checkboxradio('refresh');       
+             				$('#noThanks').prop('checked',true).checkboxradio('refresh');       
              			}
              			else{
              				$('#social').prop('checked', false).checkboxradio('refresh');
              				$('#doe').prop('checked', false).checkboxradio('refresh');
              				$('#localCity').prop('checked', false).checkboxradio('refresh');
-             				$('#autoVendors').prop('checked', false).checkboxradio('refresh');       		
+             				$('#autoVendors').prop('checked', false).checkboxradio('refresh'); 
+             				$('#noThanks').prop('checked', false).checkboxradio('refresh'); 
              			}
              		} );
             </script>        

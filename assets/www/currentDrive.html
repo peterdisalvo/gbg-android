@@ -18,7 +18,7 @@ and open the template in the editor.
             <div data-role="content">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a id="currentdrive-end" data-location="endWatch" data-rel="dialog" data-role="button" href="endDriveDialog.html">
+                        <a id="currentdrive-end" data-location="endWatch" data-transition="pop" data-role="button" data-rel="dialog" href="endDriveDialog.html">
                             End Drive
                         </a>
                     </div>
@@ -47,6 +47,9 @@ and open the template in the editor.
                                 <span class="value"><span id="geolocationMaxSpeed">0</span> MPH</span> 
                             </div>
                     </li>
+                 </ul>
+                 
+                 <ul data-role="listview" data-divider-theme="a" data-inset="true">     
                      <li data-role="list-divider" role="heading">
                         Safety
                     </li>
@@ -64,6 +67,9 @@ and open the template in the editor.
                                 <span class="value">0 Minutes</span> 
                             </div>
                     </li>
+                 </ul>
+                 
+                 <ul data-role="listview" data-divider-theme="a" data-inset="true">     
                     <li data-role="list-divider" role="heading">
                         Efficency
                     </li>
@@ -103,6 +109,16 @@ and open the template in the editor.
             <script type="text/javascript" src="cordova-2.5.0.js"></script>
             <script type="text/javascript" src="GMPlugin.js"></script>
 			<script type="text/javascript">
+				document.addEventListener("backbutton", function(){
+					console.log("Back button selected");
+					$.mobile.changePage('endDriveDialog.html', {transition: 'pop', role: 'dialog'}); 
+				 },true);
+			
+				document.addEventListener("homebutton", function(){
+					console.log("Back button selected");
+					$.mobile.changePage('endDriveDialog.html', {transition: 'pop', role: 'dialog'}); 
+				 },true);
+				
 	            function launchGoogleMapsActivity() {
 	            	var success = function(geoname) {
 	                    console.log(JSON.stringify(geoname));

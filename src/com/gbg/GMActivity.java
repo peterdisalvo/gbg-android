@@ -45,6 +45,7 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 				
 			} else if (networkIsEnabled) {
 				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000L, 10F, this);
+				
 			} else {
 				// Show an error dialog that GPS is disabled.
 			}
@@ -108,7 +109,6 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 				map.setMyLocationEnabled(true);
 				// register the LocationSource
 				map.setLocationSource(this);
-				map.animateCamera(CameraUpdateFactory.zoomTo(0));
 			}
 		}
 	}
@@ -143,7 +143,6 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 				prevLocation.set(location);
 
 			} else {
-				map.animateCamera(CameraUpdateFactory.zoomTo(14f)); // set the zoom the first time
 				prevLocation = location;
 			}
 		}
