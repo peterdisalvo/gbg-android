@@ -39,6 +39,7 @@
 	    <plugin name="Globalization" value="org.apache.cordova.Globalization"/>
 	    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser"/>
 	    <plugin name="GMPlugin" value="com.gbg.GMPlugin"/>
+	    <plugin name="FacebookConnect" value="com.gbg.FacebookConnect" />
 	</plugins>
 </cordova>
 
