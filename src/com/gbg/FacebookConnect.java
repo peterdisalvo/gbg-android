@@ -87,7 +87,7 @@ public class FacebookConnect extends Plugin {
 			String msg = params.getString("message");
 			parameters.putString("name", "GBG Driver Challenge");
 			parameters.putString("message", msg);
-			parameters.putString("description", "The merger of social apps and gamification of real time vehicle and energy data. The GBG app allows users to compete with celebrities, friends, themselves and strangers on games that reinforce good driving habits and smart energy usage. Data is processed locally and stored on Green Button Gamer cloud-based servers.");
+			parameters.putString("description", "The merger of social apps and gamification of real time vehicle and energy data.  Do you GBG?");
 			parameters.putString("link", "https://soundcloud.com/greenbuttongamer/do-you-gbg-driver-remix");
 			parameters.putString("picture", "http://static.wix.com/media/3a66ed_f0d12230fec8a30dab10f9a6013de8a9.png_srz_135_135_75_22_0.50_1.20_0.00_png_srz");
 			parameters.putString("caption", "One text or call could wreck it all");
