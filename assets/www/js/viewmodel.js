@@ -3,42 +3,104 @@ function UserModel(){
 }
 
 var commuterResults = {
-	maxSpeed: 70,
-	rapidAccelCount:4,
-	speedingTime:2,
-	distanceTraveled:20,
-	tripTime:25
+	overSpeedLimit: 0,
+	fastAccelerations:1,
+	hardBreaks:1,
+	idling:5,
+	timesTexting:0
 };
 
 var hardBrakesResults = {
-	maxSpeed: 65,
-	rapidAccelCount:1,
-	speedingTime:5,
-	distanceTraveled:20,
-	tripTime:30
+		overSpeedLimit: 3,
+		fastAccelerations:1,
+		hardBreaks:7,
+		idling:2,
+	timesTexting:0
 };
 
 var speedyResults = {
-	maxSpeed: 75,
-	rapidAccelCount:10,
-	speedingTime:10,
-	distanceTraveled:20,
-	tripTime:35
+		overSpeedLimit: 6,
+		fastAccelerations:3,
+		hardBreaks:4,
+		idling:1,
+	timesTexting:0
 };
        
 var racerResults = {
-	maxSpeed: 70,
-	rapidAccelCount:6,
-	speedingTime:20,
-	distanceTraveled:20,
-	tripTime:30
+		overSpeedLimit: 6,
+		fastAccelerations:6,
+		hardBreaks:3,
+		idling:0,
+	timesTexting:0
 };
        
  function ResultsModel() {
 	 var self = this;
 	 self.myDriveResults = {};
      self.opponentsResults = {};
- }   ;          
+     self.result = "";
+     self.computeResult = function(){
+    	var score =0;
+    	var opponentScore =0;
+    	if (self.myDriveResults.overSpeedLimit < self.opponentsResults.overSpeedLimit)
+		{
+    		score++;
+		}
+    	else if(self.myDriveResults.overSpeedLimit > self.opponentsResults.overSpeedLimit)
+    	{
+    		opponentScore++;
+    	}
+    	
+    	if (self.myDriveResults.fastAccelerations < self.opponentsResults.fastAccelerations)
+		{
+    		score++;
+		}
+    	else if(self.myDriveResults.fastAccelerations > self.opponentsResults.fastAccelerations)
+    	{
+    		opponentScore++;
+    	}
+    	
+    	if (self.myDriveResults.idling < self.opponentsResults.idling)
+		{
+    		score++;
+		}
+    	else if(self.myDriveResults.idling > self.opponentsResults.idling)
+    	{
+    		opponentScore++;
+    	}
+    	
+    	if (self.myDriveResults.overSpeedLimit < self.opponentsResults.overSpeedLimit)
+		{
+    		score++;
+		}
+    	else if(self.myDriveResults.overSpeedLimit > self.opponentsResults.overSpeedLimit)
+    	{
+    		opponentScore++;
+    	}
+    	
+    	if (self.myDriveResults.timesTexting > 0)
+		{
+    		score =0;
+		}
+    	else if(self.myDriveResults.timesTexting > self.opponentsResults.timesTexting)
+    	{
+    		opponentScore++;
+    	}
+    	  	
+    	if(score > opponentScore)
+		{
+    		self.result = "won";
+		}
+    	else if (score < opponentScore)
+    	{
+    		self.result = "lost";
+    	} 
+    	else
+		{
+		self.result = "tied";
+		}
+     };
+ };          
 
 function DriveModel() {
 	var self = this;

@@ -33,6 +33,7 @@ $('#selectSampleDataSet').live('pageshow', function(event) {
 				resultsModel = new ResultsModel;
 				resultsModel.myDriveResults = driveModel.getMyDriveResults();
 			    resultsModel.opponentsResults = driveModel.getopponentsDriveResults();	
+			    resultsModel.computeResult();
 			}
 			else{
 				alert('Please select a sample drive for both.');
