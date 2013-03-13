@@ -18,7 +18,7 @@ and open the template in the editor.
             <div data-role="content">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a id="currentdrive-end" data-location="endWatch" data-transition="pop" data-role="button" data-rel="dialog" href="endDriveDialog.html">
+                        <a href="#popupDialog" data-rel="popup" data-role="button"  data-transition="pop" data-theme="a">
                             End Drive
                         </a>
                     </div>
@@ -29,6 +29,20 @@ and open the template in the editor.
                     </div>
                 </div> 
 
+			<!-- POPUP -->
+			<div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+			    <div data-role="header" data-theme="a" class="ui-corner-top">
+			        <h1>End Drive?</h1>
+			    </div>
+			    <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content center">
+			        <h2>Are you sure you want to end this drive?</h2> 
+	
+			        <a data-geolocation="stopWatch" href="driveResults.html" data-role="button" data-inline="true" data-transition="flow" data-theme="a">   Yes</a>
+			        <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+			    </div>
+			</div>   
+			<!--End POPUP -->
+			
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">     
                      <li data-role="list-divider" role="heading">
                         Speed

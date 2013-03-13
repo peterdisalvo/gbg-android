@@ -32,7 +32,7 @@ $('#dashboard').live('pageshow', function(event) {
 	});
 });
 
-$('#endDriveDialog').live('pageshow', function(event) {
+$('#currentDrive').live('pageshow', function(event) {
 	$('[data-geolocation="stopWatch"]').click(function(){
 	    //user is starting drive sign up for geolocation services.
 		clearWatch();
