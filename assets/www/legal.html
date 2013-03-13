@@ -14,7 +14,7 @@
                 </h3>
             </div>
             <div data-role="content">
-                 <form action="dashboard.html">
+                 <form id="dataSharing" action="dashboard.html">
                     <div data-role="fieldcontain" align="center">
                         <fieldset data-role="controlgroup">
                             <H2>Data sharing</h2>
@@ -64,7 +64,7 @@
 						$.mobile.changePage('logoutDialog.html', {transition: 'pop', role: 'dialog'}); 
 					 },true);
             
-             		$( "#shareData" ).on( "slidestop", function( event, ui ) {
+             		$( "#shareData").on( "slidestop", function( event, ui ) {
              			if (event.target.value === "on"){
              				$('#social').prop('checked',true).checkboxradio('refresh');
              				$('#doe').prop('checked',true).checkboxradio('refresh');
