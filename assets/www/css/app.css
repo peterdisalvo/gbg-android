@@ -2,6 +2,12 @@ root {
     display: block;
 }
 
+.facebooklink
+{
+	font-size: 2em;
+	color: blue;
+}
+
 .italics{
 	font-style: italic;
 }

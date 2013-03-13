@@ -39,7 +39,11 @@ var racerResults = {
 	 self.myDriveResults = {};
      self.opponentsResults = {};
      self.result = "";
-     self.lostChallenge =  ko.observable(false) ;
+     self.displayCharityLinks =  ko.observable(false) ;
+     self.displayFacebookPost =  ko.observable(true) ;
+     self.postResultToFaceBook = function(){
+    	 alert("fake post right now");
+     };
      self.computeResult = function(){
     	var score =0;
     	var opponentScore =0;
@@ -95,7 +99,7 @@ var racerResults = {
     	else if (score < opponentScore)
     	{
     		self.result = "lost";
-    		self.lostChallenge(true);
+    		self.displayCharityLinks(true);
     	} 
     	else
 		{
