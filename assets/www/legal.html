@@ -59,19 +59,11 @@
             </div>
             
             <script type="text/javascript">
-<<<<<<< HEAD
-		                        
 		            document.addEventListener("menubutton", function(){
 						console.log("menu selected");
 						$.mobile.changePage('settings.html', {transition: 'pop', role: 'dialog'}); 
 					 },true);
-=======
-// 		            document.addEventListener("backbutton", function(){
-// 						console.log("Back button selected");
-// 						$.mobile.changePage('logoutDialog.html', {transition: 'pop', role: 'dialog'}); 
-// 					 },true);
->>>>>>> 13a944b061f0af52d0b8a089864bc8ab1d62c28e
-            
+
              		$( "#shareData").on( "slidestop", function( event, ui ) {
              			if (event.target.value === "on"){
              				$('#social').prop('checked',true).checkboxradio('refresh');
