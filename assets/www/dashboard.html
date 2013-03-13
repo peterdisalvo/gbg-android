@@ -89,9 +89,34 @@ and open the template in the editor.
                 </ul>
             </div>
             
-       <div data-role="footer" data-position="fixed" class="ui-bar">
-		    <a href="#" data-icon="gear">Sync or Select Car</a>
+       <div data-role="footer" data-position="fixed" class="ui-bar center">
+		    <a  href="#popupNested" data-rel="popup" data-role="button" data-inline="true" data-icon="gear" data-transition="pop">Sync or Select Car</a>
+		    
+		    <div data-role="popup" id="popupNested" data-theme="none">
+			    
+			         <a data-role="button" data-icon="gear" href="#" style="margin:0; text-align:left;">
+                            Sync with device
+                        </a>
+			      <div data-role="collapsible-set"  style="margin:0; width:250px;">
+			        <div data-role="collapsible" data-inset="false" data-collapsed-icon="grid" style="background: #292929;">
+			            <h2>Select your car</h2>
+			            <form>
+						    <fieldset data-role="controlgroup">
+						        <legend style:"display:none"></legend>
+						        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="corolla">
+						        <label for="radio-choice-v-2a">2003 Toyota Corolla</label>
+						        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="dodge">
+						        <label for="radio-choice-v-2b">2011 Dodge Caravan</label>
+						        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="mustange">
+						        <label for="radio-choice-v-2c">Ford Mustang</label>
+						    </fieldset>
+						</form>
+			        </div><!-- /collapsible -->		     
+			    </div><!-- /collapsible set -->
+			</div><!-- /popup -->
 		</div>
+		
+		
     </div>
 
     </body>
