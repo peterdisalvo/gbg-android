@@ -57,6 +57,8 @@ public class FacebookConnect extends Plugin {
 				pluginResult = this.requestWithGraphPath(args, callbackId);
 			else if (action.equals("dialog"))
 				pluginResult = this.dialog(args, callbackId);
+			else if (action.equals("logout"))
+				pluginResult = this.logout(args, callbackId);
 			else if (action.equals("post"))
 				pluginResult = this.postOnWall(args, callbackId);
 

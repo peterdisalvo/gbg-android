@@ -101,6 +101,7 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			if (map != null) {
 				map.setMyLocationEnabled(true);
 				map.setLocationSource(this);
+				CameraUpdateFactory.newLatLng(new LatLng(39.8282, 98.5795));
 			}
 		}
 	}
