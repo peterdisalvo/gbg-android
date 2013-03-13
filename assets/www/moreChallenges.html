@@ -1,0 +1,59 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- don't need to include css or js in subsequent files because 
+             jquery Mobile loads all pages into one page -->
+    </head>
+    <body>
+        <div data-theme="a" data-role="page" id="dashboard">
+            <div data-role="content">
+                <ul id="dashboard-challenges" data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Challenges
+                    </li>
+                    <li data-theme="a">
+                        <a data-geolocation="startWatch" href="driveResults.html" data-transition="slide">
+                                <img src="img/jen.jpg"> 
+                                <p class="opponent">Jenn</p>
+                                 <div class="win-loss">
+                                    <div class="win">0 Wins</div>
+                                    <div class="losses">0 Loses</div>
+                                </div>
+                                 <span  class="challenge-state drive">You won!</span>
+                        </a>
+                    </li>
+                     <li data-theme="a">
+                        <a href="driveResults.html" data-transition="slide">
+                                
+                                <img src="img/peter.png">
+                                 <p class="opponent">Peter</p>
+                                 <div class="win-loss">
+                                    <div class="win">0 Wins</div>
+                                    <div class="losses">0 Loses</div>
+                                </div>
+                                 <span  class="challenge-state waiting">Waiting</span>
+                        </a>
+                    </li>
+                     <li data-theme="a">
+                        <a href="driveResults.html" data-transition="slide">
+                            <p class="opponent">Adrianne</p>
+                            <img src="img/adrianne.jpg">
+                             <div class="win-loss">
+                                <div class="win">0 Wins</div>
+                                <div class="losses">0 Loses</div>
+                            </div>
+                             <span  class="challenge-state loss">You Lost!</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    </body>
+</html>
