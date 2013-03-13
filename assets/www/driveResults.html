@@ -31,7 +31,11 @@ and open the template in the editor.
 		        </div>
 		        
 		        <div>
-		        	You <em><span data-bind="text: result"></span></em>!  	        
+		        	You <em><span data-bind="text: result"></span></em>!
+		        	<span data-bind="visible: lostChallenge">
+		        		Please make your donation to the charity of your choice: 
+		        		<a href="http://www.ddfn.org/">Distracted Drive Foundation</a> or <a href="http://www.txtresponsibly.org/">TXT Responsibly</a>
+		        	</span> 	        
 		        </div>
 		        
 		        <!-- --------Results-------- -->

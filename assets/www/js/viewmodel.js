@@ -39,6 +39,7 @@ var racerResults = {
 	 self.myDriveResults = {};
      self.opponentsResults = {};
      self.result = "";
+     self.lostChallenge =  ko.observable(false) ;
      self.computeResult = function(){
     	var score =0;
     	var opponentScore =0;
@@ -94,6 +95,7 @@ var racerResults = {
     	else if (score < opponentScore)
     	{
     		self.result = "lost";
+    		self.lostChallenge(true);
     	} 
     	else
 		{
