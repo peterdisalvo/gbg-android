@@ -22,7 +22,10 @@ $('#selectSampleDataSet').live('pageshow', function(event) {
 	$('[data-geolocation="startWatch"]').click(function(){
 	    //user is starting drive sign up for geolocation services.
 		if (driveModel){
-			if(driveModel.myResults && driveModel.opponentResults)
+			
+			var myResults = ko.utils.unwrapObservable(driveModel.myResults); 
+			var opponentResults = ko.utils.unwrapObservable(driveModel.opponentsResults); 
+			if(myResults && opponentResults)
 			{
 				startWatch();
 				$.mobile.changePage('currentDrive.html'); 
