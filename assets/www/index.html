@@ -118,9 +118,9 @@
          		});
          		
         		
-        		
+        		var facebookConnect;
          		function loginWithFacebook() {
-         			var facebookConnect = window.facebookConnect;
+        			facebookConnect = window.facebookConnect;
 
          			facebookConnect.login({permissions: ["email", "user_about_me", "publish_actions"], appId: "613385095354844"}, function(result) {
 	       			    console.log("FacebookConnect.login:" + JSON.stringify(result));
@@ -131,7 +131,7 @@
 	       			        return; 
 	       			    }
 	       			    
-		       			facebookConnect.post("Do you GBG?  www.greenbuttongamer.com", function(result) {
+		       			/*facebookConnect.post("Do you GBG?  www.greenbuttongamer.com", function(result) {
 		       			    console.log("FacebookConnect.post:" + JSON.stringify(result));
 		       				
 		       			    // Check for cancellation/error
@@ -139,7 +139,7 @@
 		       			        console.log("FacebookConnect.post:failedWithError:" + result.message);
 		       			        return; 
 		       			    }
-	      			 	});
+	      			 	});*/
 		       			 
 		       			$.mobile.changePage("legal.html");        			    
          			});

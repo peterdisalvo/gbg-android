@@ -18,6 +18,9 @@
 				$("#logoutButton").click(function (){
 					//Clean up the event listerns for the settings button 
 					document.removeEventListener("menubutton", settings);
+					facebookConnect.logout(function() {
+						console.log('logged out.')
+					});
 				});
 				</script>
 			</div>
