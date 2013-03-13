@@ -28,9 +28,25 @@ and open the template in the editor.
                 <a data-role="button" href="selectSampleDataSet.html">
                     Myself
                 </a>
-                
-                <p>Donate dollar to stop texting while driving?
-                <input id="donate" checked name="donate" type="checkbox">
+                <div class="center">
+               <form>
+				    <label for="flip-1">Donate dollar to stop texting while driving? 
+				    <a href="#popupInfo" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext" data-theme="a" data-inline="true">Info</a></label>
+				    <select name="flip-1" id="flip-1"  data-role="slider">
+				        <option value="off">No</option>
+				        <option selected value="on">Yes</option>
+				    </select>
+			   </form>
+			   
+			   <div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+				  <h3>Texting and Driving Donation</h3>
+				  <p>By selecting this option you are helping promote safe driving habit.  Currently, distracted drivers are over 23 times more likely to cause an accident.  Please help us promote safe driving.</p> 
+				  <p>
+				  If you lose your challenge, you will be asked to pay to a charity of your choice.
+				    The charities we have teamed up with are <a href="http://www.ddfn.org/">Distracted Drive Foundation</a> and <a href="http://www.txtresponsibly.org/">TXT Responsibly</a>
+				  </p>
+				</div>
+			   </div>
             </div>
         </div>
     </body>
