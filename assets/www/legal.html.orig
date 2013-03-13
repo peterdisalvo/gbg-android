@@ -78,7 +78,7 @@
 				                label: "Log Out",
 				                image: "img/options.png",
 				                action: onLogOut
-				            }]
+				            }
 				        ]
 				    });
 

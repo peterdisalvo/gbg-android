@@ -7,14 +7,12 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -94,12 +92,6 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 	 * method in {@link #onResume()} to guarantee that it will be called.
 	 */
 	private void setUpMapIfNeeded() {
-//		int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
-//		if(status != ConnectionResult.SUCCESS) {
-//			Toast.makeText(getApplicationContext(), "Google Play Services not available.", Toast.LENGTH_LONG).show();
-//		    return;
-//		}
-		
 		// Do a null check to confirm that we have not already instantiated the map.
 		if (map == null) {  
 			// Try to obtain the map from the SupportMapFragment.
@@ -108,7 +100,6 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			// Check if we were successful in obtaining the map.
 			if (map != null) {
 				map.setMyLocationEnabled(true);
-				// register the LocationSource
 				map.setLocationSource(this);
 			}
 		}
@@ -130,8 +121,8 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			mListener.onLocationChanged(location);
 
 			// Move the camera to the user's location once it's available
-			map.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(
-					location.getLatitude(), location.getLongitude())));
+			map.animateCamera(CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(
+					location.getLatitude(), location.getLongitude()), 15)));
 			
 			if (prevLocation != null) {
 				Polyline line = map.addPolyline(new PolylineOptions()
