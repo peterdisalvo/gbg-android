@@ -23,12 +23,16 @@ $('#selectSampleDataSet').live('pageshow', function(event) {
 	    //user is starting drive sign up for geolocation services.
 		if (driveModel){
 			
-			var myResults = ko.utils.unwrapObservable(driveModel.myResults); 
-			var opponentResults = ko.utils.unwrapObservable(driveModel.opponentsResults); 
+			var myResults = ko.utils.unwrapObservable(driveModel.myDriveType); 
+			var opponentResults = ko.utils.unwrapObservable(driveModel.opponentsDriveType); 
 			if(myResults && opponentResults)
 			{
 				startWatch();
 				$.mobile.changePage('currentDrive.html'); 
+				
+				resultsModel = new ResultsModel;
+				resultsModel.myDriveResults = driveModel.getMyDriveResults();
+			    resultsModel.opponentsResults = driveModel.getopponentsDriveResults();	
 			}
 			else{
 				alert('Please select a sample drive for both.');

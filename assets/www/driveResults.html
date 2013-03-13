@@ -36,8 +36,10 @@ and open the template in the editor.
                   <li data-theme="a">
 		        	 <div class="ui-grid-b drive-result">
 			            <!-- --------Max Speed-------- -->
-			            <div class="ui-block-a">
-			            	<div class="my-score results-win">10</div>
+			            <div  class="ui-block-a">
+			            	<div data-bind="with: myDriveResults"  class="my-score results-win">
+			            	<span data-bind="text: maxSpeed"></span>
+			            	</div>
 			            </div>
 			            <div class="ui-block-b">
 			            	<img src="img/max-speed.png"/>

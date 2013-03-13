@@ -24,13 +24,13 @@ and open the template in the editor.
 			    <select data-bind="options: dataSets,
 			    					optionsCaption: 'Please select...',
 			    					optionsText: 'name',
-			    					value: myResults">
+			    					value: myDriveType">
 			    </select>
 			</div>
 			
-			  debug <p data-bind="with: myResults">
+			 debug <p data-bind="with: myDriveType">
 				you choose <span data-bind="text: name"></span>
-				</p><!---->
+				</p><!-- -->
 			
 			<div data-role="fieldcontain">
 				<h3>Opponent's sample drive:</h3>
@@ -38,10 +38,11 @@ and open the template in the editor.
 			    <select data-bind="options: dataSets,
 			    					optionsCaption: 'Please select...',
 			    					optionsText: 'name',
-			    					value: opponentsResults">
+			    					value: opponentsDriveType">
 
 			    </select>
 			</div>
+			</form>
 			<a href="#" data-geolocation="startWatch" data-role="button">Start Drive</a>
         </div>
     </body>
