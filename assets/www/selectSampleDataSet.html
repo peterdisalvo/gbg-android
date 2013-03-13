@@ -16,19 +16,33 @@ and open the template in the editor.
                 </h3>
             </div>
             <div data-role="content">
-                <a data-geolocation="startWatch" data-role="button" href="currentDrive.html">
-                    Commuter
-                </a>
-                <a data-geolocation="startWatch" data-role="button" href="currentDrive.html">
-                    Hard Brakes
-                </a>
-                <a data-geolocation="startWatch" data-role="button" href="currentDrive.html">
-                    Speedy
-                </a>
-                <a data-geolocation="startWatch" data-role="button" href="currentDrive.html">
-                    Racer
-                </a>
-            </div>
+            
+            <form>
+			<div data-role="fieldcontain">
+				<h3>My sample drive:</h3>
+			    <label for="select-native-1"></label>
+			    <select data-bind="options: dataSets,
+			    					optionsCaption: 'Please select...',
+			    					optionsText: 'name',
+			    					value: myResults">
+			    </select>
+			</div>
+			
+			<!--  debug <p data-bind="with: myResults">
+				you choose <span data-bind="text: name"></span>
+				</p>-->
+			
+			<div data-role="fieldcontain">
+				<h3>Opponent's sample drive:</h3>
+			    <label for="select-native-1"></label>
+			    <select data-bind="options: dataSets,
+			    					optionsCaption: 'Please select...',
+			    					optionsText: 'name',
+			    					value: opponentsResults">
+
+			    </select>
+			</div>
+			<a href="#" data-geolocation="startWatch" data-role="button">Start Drive</a>
         </div>
     </body>
 </html>

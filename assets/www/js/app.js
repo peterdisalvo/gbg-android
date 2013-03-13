@@ -21,13 +21,24 @@ var mapMarkersArray = [];
 $('#selectSampleDataSet').live('pageshow', function(event) {
 	$('[data-geolocation="startWatch"]').click(function(){
 	    //user is starting drive sign up for geolocation services.
-		startWatch();
+		if (driveModel){
+			if(driveModel.myResults && driveModel.opponentResults)
+			{
+				startWatch();
+				$.mobile.changePage('currentDrive.html'); 
+			}
+			else{
+				alert('Please select a sample drive for both.');
+			}
+		}
+		else{
+			console.log('Something when wrong');
+		}
 	});
 });
 
 $('#dashboard').live('pageshow', function(event) {
 	$('[data-geolocation="startWatch"]').click(function(){
-	    //user is starting drive sign up for geolocation services.
 		startWatch();
 	});
 });
@@ -96,7 +107,7 @@ $('[data-geolocation="stopWatch"]').click(function(){
 //Start watch
 function startWatch() {
 	locationWatchId = navigator.geolocation.watchPosition(reportLocation, onError, { enableHighAccuracy: true });
-    navigator.geolocation.getCurrentPosition(startLocation, onError,{ enableHighAccuracy: true });
+   // navigator.geolocation.getCurrentPosition(startLocation, onError,{ enableHighAccuracy: true });
 }
 
 // clear the watch that was started earlier
