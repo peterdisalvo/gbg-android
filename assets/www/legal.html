@@ -59,9 +59,10 @@
             </div>
             
             <script type="text/javascript">
-		            document.addEventListener("backbutton", function(){
-						console.log("Back button selected");
-						$.mobile.changePage('logoutDialog.html', {transition: 'pop', role: 'dialog'}); 
+		                        
+		            document.addEventListener("menubutton", function(){
+						console.log("menu selected");
+						$.mobile.changePage('settings.html', {transition: 'pop', role: 'dialog'}); 
 					 },true);
             
              		$( "#shareData").on( "slidestop", function( event, ui ) {

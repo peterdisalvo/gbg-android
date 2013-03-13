@@ -24,37 +24,19 @@ and open the template in the editor.
 					<ul data-role="listview" data-divider-theme="a" data-inset="true">
 						<li data-theme="a">
 							<div class="drive-stat">
-								<img src="img/rapid-accel.png" /> <span class="label">You did not text and drive.  Great Job!</span>
+								<img src="img/rapid-accel.png" /> <span class="label">You did not text and drive.</span>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div data-role="collapsible" data-collapsed="true">
-					<h3>Efficency</h3>
-					
+					<h3>Efficiency</h3>		
 				  <img class="chart" src="img/mpg-line.png" />			
-				
 				</div>
 
 			</div>
 
-			
-			
 		</div>
-
-		<script type="text/javascript" src="cordova-2.5.0.js"></script>
-		<script type="text/javascript" src="GMPlugin.js"></script>
-		<script type="text/javascript">
-			function launchGoogleMapsActivity() {
-				var success = function(geoname) {
-					console.log(JSON.stringify(geoname));
-				};
-				var fail = function(error) {
-					console.log(error);
-				};
-				GMPlugin.startGM();
-			}
-		</script>
 	</div>
 </body>
 </html>
