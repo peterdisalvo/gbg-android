@@ -48,11 +48,12 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 				
 			} else {
 				// Show an error dialog that GPS is disabled.
+				Log.e(TAG, "GPS is disabled");
 			}
 			
 		} else {
-			// Show a generic error dialog since LocationManager is null for
-			// some reason
+			// Show a generic error dialog since LocationManager is null for some reason
+			Log.e(TAG, "location manager is null");
 		}
 
 		setUpMapIfNeeded();
@@ -93,11 +94,11 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 	 * method in {@link #onResume()} to guarantee that it will be called.
 	 */
 	private void setUpMapIfNeeded() {
-		int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
-		if(status != ConnectionResult.SUCCESS) {
-			Toast.makeText(getApplicationContext(), "Google Play Services not available.", Toast.LENGTH_LONG).show();
-		    return;
-		}
+//		int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
+//		if(status != ConnectionResult.SUCCESS) {
+//			Toast.makeText(getApplicationContext(), "Google Play Services not available.", Toast.LENGTH_LONG).show();
+//		    return;
+//		}
 		
 		// Do a null check to confirm that we have not already instantiated the map.
 		if (map == null) {  
@@ -145,6 +146,8 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			} else {
 				prevLocation = location;
 			}
+		} else {
+			Log.e(TAG, "location listener is null");
 		}
 	}
 

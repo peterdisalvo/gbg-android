@@ -38,17 +38,17 @@
                 <form id="login" action="legal.html">
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
-                            <input name="" id="username" placeholder="Username" value="" type="text" />
+                            <input name="" id="username" placeholder="Username" value="" type="text" width="100%"/>
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
-                            <input id="password" type="password" placeholder="Password" size="25">
+                            <input id="password" type="password" placeholder="Password" size="25" width="100%">
                         </fieldset>
                     </div>
                     
                     <input id="login" type="submit" value="Log In" />
-                    <a data-role="button" onclick="loginWithFacebook()">
+                    <a data-role="button" onClick="loginWithFacebook()">
                      Or Log In with Facebook
                		</a>
                		
@@ -88,6 +88,7 @@
         <script type="text/javascript" src="js/index.js"></script>   
         <script src="js/knockout-2.2.1.js"></script>
         <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="GMPlugin.js"></script>
         <script type="text/javascript" src="FacebookConnect.js"></script>
         <script type="text/javascript">
             app.initialize();
