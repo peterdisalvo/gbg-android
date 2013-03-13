@@ -59,10 +59,12 @@
             </div>
             
             <script type="text/javascript">
-		            document.addEventListener("menubutton", function(){
-						console.log("menu selected");
-						$.mobile.changePage('settings.html', {transition: 'pop', role: 'dialog'}); 
-					 },true);
+		            document.addEventListener("menubutton", settings,true);
+		            
+		            function settings(){
+		            	//console.log("menu selected");
+						$.mobile.changePage('settings.html', {role: 'dialog'}); 
+		            };
 
              		$( "#shareData").on( "slidestop", function( event, ui ) {
              			if (event.target.value === "on"){

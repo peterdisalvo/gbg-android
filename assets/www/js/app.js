@@ -33,11 +33,21 @@ $('#dashboard').live('pageshow', function(event) {
 });
 
 $('#currentDrive').live('pageshow', function(event) {
+	//disable back button
+	document.addEventListener("backbutton", disableBackButton, true);
+	
 	$('[data-geolocation="stopWatch"]').click(function(){
 	    //user is starting drive sign up for geolocation services.
 		clearWatch();
 	});
 });
+
+
+
+function disableBackButton(){
+	console.log("Back button selected");
+	$('#popupDialog').popup("open");
+ };
 
 function reportLocation(position) {
     //http://docs.phonegap.com/en/2.4.0/cordova_geolocation_geolocation.md.html#Geolocation

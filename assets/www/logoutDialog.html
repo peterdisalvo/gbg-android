@@ -9,12 +9,20 @@
 	       <div data-role="content" data-theme="a" >
 			   <h2>Are you sure you want to log out?</h2> 
 			   
-			   <a  data-role="button" data-theme="a" href="index.html">
+			   <a id="logoutButton" data-role="button" data-theme="a" href="index.html">
                     Yes
                 </a>
                 <a href="#" data-role="button" data-rel="back" data-theme="c">No</a>
-		
+				
+				<script type="text/javascript">
+				$("#logoutButton").click(function (){
+					//Clean up the event listerns for the settings button 
+					document.removeEventListener("menubutton", settings);
+				});
+				</script>
 			</div>
+			
+			
 		</div>
 </body>
 </html>
