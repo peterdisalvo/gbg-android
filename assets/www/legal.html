@@ -59,28 +59,28 @@
             </div>
             
             <script type="text/javascript">
-// 		            document.addEventListener("menubutton", settings,true);
+		            document.addEventListener("menubutton", settings,true);
 		            
-// 		            function settings(){
-// 		            	//console.log("menu selected");
-// 						$.mobile.changePage('settings.html', {role: 'dialog'}); 
-// 		            };
+		            function settings(){
+		            	//console.log("menu selected");
+						$.mobile.changePage('settings.html', {role: 'dialog'}); 
+		            };
 				 
-				    var onLogOut = function() {
-				        console.log("logout");
-				        $.mobile.changePage('logoutDialog.html'); 
-				    };
+// 				    var onLogOut = function() {
+// 				        console.log("logout");
+// 				        $.mobile.changePage('logoutDialog.html'); 
+// 				    };
 				 
-				    var optionsmenu = new OptionsMenu({
-				        id: "optionsmenu",
-				        items: [ 
-				            [ {
-				                label: "Log Out",
-				                image: "img/options.png",
-				                action: onLogOut
-				            }]
-				        ]
-				    });
+// 				    var optionsmenu = new OptionsMenu({
+// 				        id: "optionsmenu",
+// 				        items: [ 
+// 				            [ {
+// 				                label: "Log Out",
+// 				                image: "img/options.png",
+// 				                action: onLogOut
+// 				            }]
+// 				        ]
+// 				    });
 
              		$( "#shareData").on( "slidestop", function( event, ui ) {
              			if (event.target.value === "on"){
