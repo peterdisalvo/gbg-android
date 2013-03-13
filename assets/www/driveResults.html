@@ -37,8 +37,7 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 			            <!-- --------Max Speed-------- -->
 			            <div  class="ui-block-a">
-			            	<div data-bind="with: myDriveResults"  class="my-score results-win">
-			            	<span data-bind="text: maxSpeed"></span>
+			            	<div data-bind="text: myDriveResults.maxSpeed" class="my-score results-win">
 			            	</div>
 			            </div>
 			            <div class="ui-block-b">
@@ -47,7 +46,7 @@ and open the template in the editor.
 	                         <div>Max Speed</div>
 			            </div>
 			            <div class="ui-block-c">
-			           		 <div class="oppenent-score results-loss">10</div>
+			           		 <div data-bind="text: opponentsResults.maxSpeed" class="oppenent-score results-loss">10</div>
 			            </div>
 		            </div>
 		          </li>
@@ -55,14 +54,14 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 		            <!-- --------Rapid Accel count-------- -->
 		             <div class="ui-block-a">
-		            	<div class="my-score results-win">10</div>
+		            	<div data-bind="text: myDriveResults.rapidAccelCount" class="my-score results-win"></div>
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/rapid-accel.png"/>
                         <div>Rapid Accel Count</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div class="oppenent-score results-loss">10</div>
+		           		 <div data-bind="text: opponentsResults.rapidAccelCount" class="oppenent-score results-loss"></div>
 		            </div>
 		           </div>
 		          </li> 
@@ -70,14 +69,14 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b">
 		            <!-- --------Speeding Time-------- -->
 		             <div class="ui-block-a">
-		            	<div class="my-score results-win">10</div>
+		            	<div data-bind="text: myDriveResults.speedingTime" class="my-score results-win"></div>
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/speeding-time.png"/>
                         <div >Speeding Time</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div class="oppenent-score results-loss">10</div>
+		           		 <div data-bind="text: opponentsResults.speedingTime" class="oppenent-score results-loss"></div>
 		            </div>
 		            </div>
 		          </li> 
@@ -85,14 +84,14 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b  drive-result">
 		            <!-- --------Distance Traveled-------- -->
 		            <div class="ui-block-a">
-		            	<div class="my-score results-win">10</div>
+		            	<div data-bind="text: myDriveResults.distanceTraveled" class="my-score results-win"></div>
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/distance-travelled.png"/>
                         <div> Distanced Traveled</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div class="oppenent-score results-loss">10</div>
+		           		 <div data-bind="text: opponentsResults.distanceTraveled"  class="oppenent-score results-loss"></div>
 		            </div>
 		              </div>
 		          </li> 
@@ -100,14 +99,14 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 		            <!-- --------Time Traveled-------- -->
 		            <div class="ui-block-a">
-		            	<div class="my-score results-win">10</div>
+		            	<div data-bind="text: myDriveResults.tripTime" class="my-score results-win">10</div>
 		            </div>
 		            <div class="ui-block-b">
 		            	 <img src="img/trip-time.png"/>
                           <div> Trip Time</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div class="oppenent-score results-loss">10</div>
+		           		 <div data-bind="text: opponentsResults.tripTime" class="oppenent-score results-loss">10</div>
 		            </div>
 		           </div>
 		          </li>
