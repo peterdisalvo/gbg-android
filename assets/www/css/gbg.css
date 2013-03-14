@@ -878,6 +878,11 @@ a.ui-link-inherit {
 
 /* Icon sprite
 -----------------------------------------------------------------------------------------------------------*/
+.ui-icon-facebook {
+	background-image: url("images/f_logo.png");
+	background-repeat: no-repeat;
+    border-radius: 						2px;
+}
 
 /* plus minus */
 .ui-icon-plus {
