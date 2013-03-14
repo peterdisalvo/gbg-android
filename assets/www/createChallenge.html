@@ -43,11 +43,22 @@ and open the template in the editor.
 				  <p>By selecting this option you are choosing to promote safe driving habits.  Distracted drivers are over 23 times more likely to cause an accident.  GBG asks that you do your part and keep the roads safe.</p> 
 				  <p>
 				  If you lose your challenge, you will be asked to pay one dollar to a charity of your choice.
-				    The charities we support are <a href="http://www.ddfn.org/">Distracted Drive Foundation</a> and <a href="http://www.txtresponsibly.org/">TXT Responsibly</a>
+				  The charities we support are <a id="ddfn" href="#">Distracted Drive Foundation</a> and <a id="txtResponsibily" href="#">TXT Responsibly</a>
 				  </p>
 				</div>
 			   </div>
             </div>
+            
+            <script type="text/javascript">
+            		$("#ddfn").click(function(){
+            			 var ref = window.open('http://www.ddfn.org/', '_blank', 'location=yes');
+            		});
+            		
+            		$("#txtResponsibily").click(function(){
+           			 var ref = window.open('http://www.txtresponsibly.org/', '_blank', 'location=yes');
+           		});
+		            document.addEventListener("menubutton", settings,true);
+		     </script>
         </div>
     </body>
 </html>

@@ -36,7 +36,7 @@ and open the template in the editor.
 		        	<span data-bind="visible: displayCharityLinks">
 		        		<br/>
 		        		Please make your donation to the charity of your choice: 
-		        		<a href="http://www.ddfn.org/">Distracted Drive Foundation</a> or <a href="http://www.txtresponsibly.org/">TXT Responsibly</a>
+		        		<a id="ddfn" href="#">Distracted Drive Foundation</a> or <a id="txtResponsibily" href="#">TXT Responsibly</a>
 		        	</span> 	
 		        	<span data-bind="visible: displayFacebookPost">
 		        		<br/>
@@ -131,12 +131,21 @@ and open the template in the editor.
                     </ul>
 		        </div>
 		       
-		       <div data-role="content">
-	                <a  data-role="button" href="dashboard.html">
-	                    Dashboard
-	                </a>
-                </div>
 
+	            <a  data-role="button" href="dashboard.html">
+	                    Dashboard
+	            </a>
+
+				<script type="text/javascript">
+            		$("#ddfn").click(function(){
+            			 var ref = window.open('http://www.ddfn.org/', '_blank', 'location=yes');
+            		});
+            		
+            		$("#txtResponsibily").click(function(){
+           			 var ref = window.open('http://www.txtresponsibly.org/', '_blank', 'location=yes');
+           		});
+		            document.addEventListener("menubutton", settings,true);
+		     </script>
             </div>
     </body>
 </html>

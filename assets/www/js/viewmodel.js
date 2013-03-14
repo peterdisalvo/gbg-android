@@ -52,14 +52,24 @@ var racerResults = {
          }
     	 
     	 msg+="  www.greenbuttongamer.com";    	 
+    	 
     	 facebookConnect.post(msg, function(result) {
-		    console.log("FacebookConnect.post:" + JSON.stringify(result));
-			
 		    // Check for cancellation/error
+    		 result = JSON.parse(result);
+
 		    if(result.cancelled || result.error) {
-		        console.log("FacebookConnect.post:failedWithError:" + result.message);
+		        console.log("failed to connect:" + result.error);
+		        facebookConnect = window.facebookConnect;
+	  			 facebookConnect.login({permissions: ["email", "user_about_me", "publish_actions"], appId: "613385095354844"}, function(result) {
+	    			    // Check for cancellation/error
+	    			    if(result.cancelled || result.error) {
+	    			        console.log("FacebookConnect.login:failedWithError:" + result.message);
+	    			        return; 
+	    			    }
+	  			});
 		        return; 
 		    }
+		    alert("Message Posted!");
 	 	});
      };
      self.computeResult = function(){

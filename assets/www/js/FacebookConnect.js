@@ -95,14 +95,12 @@
 	};
 
 	FacebookConnect.prototype.post = function(message, callback) {
-
-		var _callback = function(logout) {
+		var _callback = function(result) {
 			//console.log('FacebookConnect.logout: %o', arguments);
 			if(typeof callback == 'function') callback.apply(null, arguments);
 		};
 
 		return cordova.exec(_callback, _callback, service, 'post', [{message: message}]);
-
 	};
 	
 	window.facebookConnect = new FacebookConnect();

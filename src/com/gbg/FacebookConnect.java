@@ -101,6 +101,7 @@ public class FacebookConnect extends Plugin {
 				Log.e(CLASS, "Blank response");
 			}
 		} catch (Exception e) {
+			response = "{\"error\": \"" + e.getMessage() + "\"}";
 			e.printStackTrace();
 		}
 		
