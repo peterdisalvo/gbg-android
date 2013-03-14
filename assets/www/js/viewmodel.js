@@ -59,6 +59,7 @@ var racerResults = {
 
 		    if(result.cancelled || result.error) {
 		        console.log("failed to connect:" + result.error);
+		        var loggedin= false;
 		        facebookConnect = window.facebookConnect;
 	  			 facebookConnect.login({permissions: ["email", "user_about_me", "publish_actions"], appId: "613385095354844"}, function(result) {
 	    			    // Check for cancellation/error
@@ -66,8 +67,12 @@ var racerResults = {
 	    			        console.log("FacebookConnect.login:failedWithError:" + result.message);
 	    			        return; 
 	    			    }
+	    			    loggedin = true;
 	  			});
-		        return; 
+	  			 
+	  			 if (!loggedin){
+	  				return; 
+	  			 }
 		    }
 		    alert("Message Posted!");
 	 	});

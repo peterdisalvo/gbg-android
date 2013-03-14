@@ -48,6 +48,10 @@ $('#selectSampleDataSet').live('pageshow', function(event) {
 $('#dashboard').live('pageshow', function(event) {
 	$('[data-geolocation="startWatch"]').click(function(){
 		startWatch();
+		resultsModel = new ResultsModel;
+		resultsModel.myDriveResults =commuterResults;
+	    resultsModel.opponentsResults = speedyResults;	
+	    resultsModel.computeResult();
 	});
 });
 
