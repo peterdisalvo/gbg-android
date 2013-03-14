@@ -60,6 +60,13 @@ $('#dashboard').live('pageshow', function(event) {
 	    resultsModel.computeResult();
 	});
 	
+	$('[data-waiting="lost"]').click(function(){
+		resultsModel = new ResultsModel;
+		resultsModel.myDriveResults = hardBrakesResults;
+	    resultsModel.opponentsResults = commuterResults;	
+	    resultsModel.computeResult();
+	});
+	
 });
 
 $('#currentDrive').live('pageshow', function(event) {
