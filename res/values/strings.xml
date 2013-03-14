@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GBG Driver Challenge</string>
-    <string name="title_activity_main">GBG Driver Challenge</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_test">TestActivity</string>
+    <string name="app_name" translatable="false">GBG Driver Challenge</string>
+    <string name="title_activity_main" translatable="false">GBG Driver Challenge</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="title_activity_test" translatable="false">TestActivity</string>
 
 </resources>
