@@ -1,4 +1,4 @@
-package com.gbg;
+package com.gbg.driver;
 
 import org.apache.cordova.api.CallbackContext;
 import org.apache.cordova.api.CordovaPlugin;

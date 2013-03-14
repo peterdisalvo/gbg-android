@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gbg"
+    package="com.gbg.driver"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -34,9 +34,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 	
-	<uses-permission android:name="com.gbg.permission.MAPS_RECEIVE"/>
+	<uses-permission android:name="com.gbg.driver.permission.MAPS_RECEIVE"/>
 
-	<permission android:name="com.gbg.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+	<permission android:name="com.gbg.driver.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
 	
 	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
 	
@@ -47,7 +47,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="com.gbg.MainActivity"
+            android:name="com.gbg.driver.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_main" >
             <intent-filter>
@@ -65,7 +65,7 @@
         </activity>
 
         <activity
-            android:name="com.gbg.GMActivity"
+            android:name="com.gbg.driver.GMActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar" >

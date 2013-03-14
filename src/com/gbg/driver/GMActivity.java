@@ -1,4 +1,4 @@
-package com.gbg;
+package com.gbg.driver;
 
 import android.graphics.Color;
 import android.location.Location;
