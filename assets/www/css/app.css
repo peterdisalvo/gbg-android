@@ -89,7 +89,9 @@ root {
 /* DASHBOARD */
 
 #dashboard-challenges li p.opponent{
-    font-size: 1.4em;
+	margin-top: 1px;
+    font-size: 1.3em;
+    font-weight:bold;
 }
 
 #dashboard .challenge-state {

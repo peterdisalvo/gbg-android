@@ -33,34 +33,28 @@ and open the template in the editor.
                     <li data-theme="a">
                         <a data-geolocation="startWatch" href="currentDrive.html" data-transition="slide">
                                 <img src="img/james.png"> 
-                                <p class="opponent">James</p>
-                                 <div class="win-loss">
-                                    <div class="win">0 Wins</div>
-                                    <div class="losses">0 Loses</div>
-                                </div>
-                                 <span  class="challenge-state drive">Drive</span>
+                               	<p class="opponent">James</p>
+                               	<p><font size="2" color="#32FF32">2 Wins</font></p>
+                               	<p><font size="2" color="#FF6453">3 Losses</font></p>                         
+                                <span  class="challenge-state drive">Drive!</span>
                         </a>
                     </li>
                      <li data-theme="a">
                         <a data-waiting="waiting"  href="driveResults.html" data-transition="slide">
                                 <img src="img/peter.png">
-                                 <p class="opponent">Pete</p>
-                                 <div class="win-loss">
-                                    <div class="win">0 Wins</div>
-                                    <div class="losses">0 Loses</div>
-                                </div>
-                                 <span  class="challenge-state waiting">Waiting</span>
+                                <p class="opponent">Pete</p>
+                               	<p><font size="2" color="#32FF32">4 Wins</font></p>
+                               	<p><font size="2" color="#FF6453">2 Losses</font></p>   
+                                <span  class="challenge-state waiting">Waiting for Pete</span>
                         </a>
                     </li>
                      <li data-theme="a">
                         <a data-waiting="lost" href="driveResults.html" data-transition="slide">
+                            <img src="img/adam95.png">
                             <p class="opponent">Adam</p>
-                            <img src="img/adam.png">
-                             <div class="win-loss">
-                                <div class="win">0 Wins</div>
-                                <div class="losses">0 Loses</div>
-                            </div>
-                             <span  class="challenge-state loss">You Lost! Pay up.</span>
+                            <p><font size="2" color="#32FF32">0 Wins</font></p>
+                            <p><font size="2" color="#FF6453">4 Losses</font></p>   
+                             <span  class="challenge-state loss">You Lost!</span>
                         </a>
                     </li>
                     <li data-theme="a">
@@ -72,7 +66,7 @@ and open the template in the editor.
                 </ul>
                 <ul id="dashboard-challenges" data-role="listview" data-divider-theme="a" data-inset="true">
                 	<li data-role="list-divider" role="heading">
-                       My Suggestions
+                       Tips
                     </li>
                     <li data-theme="a">
                           Make your commute easier, leave 15 minutes earlier.  
@@ -82,7 +76,7 @@ and open the template in the editor.
                     </li> -->
                     <li data-theme="a">
                         <a href="mySuggestions.html" data-transition="slide">
-                           View All Suggestions
+                           View All Tips
                         </a>
                     </li>
                 </ul>
@@ -93,11 +87,11 @@ and open the template in the editor.
 		    
 		    <div data-role="popup" id="popupNested" data-theme="none">
 			    
-			         <a data-role="button" data-icon="gear" href="#" style="margin:0; text-align:left;">
+			         <a data-role="button" data-theme="a" data-icon="gear" href="#" style="margin:0; text-align:left;">
                             Sync with device
                         </a>
 			      <div data-role="collapsible-set"  style="margin:0; width:250px;">
-			        <div data-role="collapsible" data-inset="false" data-collapsed-icon="grid" style="background: #292929;">
+			        <div data-role="collapsible" data-theme="a" data-inset="false" data-collapsed-icon="grid" style="background: #292929;">
 			            <h2>Select your car</h2>
 			            <form>
 						    <fieldset data-role="controlgroup">

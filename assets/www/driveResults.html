@@ -18,29 +18,36 @@ and open the template in the editor.
             <div data-role="content">
                 <div class="ui-grid-b">
 		            <div class="ui-block-a center" >
-		            	<img src="img/zac.png" alt="my picture"/>
-		            	<p>Zac</p>
+		            	<img id='userIcon' height="80" width="80" src="img/pete.png" alt="my picture"/>
+		            	<H3  id='userFirstname'>Me</H3>
 		            </div>
 		              <div class="ui-block-b center" >
+		              	<br/>
 		            	<H2>VS.</H2>
 		            </div>
 		            <div class="ui-block-c center">
-		           		 <img src="img/peter.png" alt="oppenent picture"/>
-		           		 <p>Peter</p>
+		           		 <img src="img/zac.png" alt="oppenent picture"/>
+		           		 <H3>Zac</H3>
 		            </div>
+		            <script type="text/javascript">
+		                var url = 'http://graph.facebook.com/'+username+'/picture?type=large';
+		                console.log("url = " + url);
+		            	$('#userIcon').attr('src', url);
+		            	$("#userFirstname").html(firstname);
+		            
+		            </script>
 		        </div>
 		        
 		        <div class="center">
-		        	<h2> You <em><span data-bind="text: result"></span></em>!</h2>
+		        	<h1> You <span data-bind="text: result"></span>!</h1>
 		        	
 		        	<span data-bind="visible: displayCharityLinks">
 		        		<br/>
-		        		Please make your donation to the charity of your choice: 
+		        		Please make a donation to the charity of your choice: 
 		        		<a id="ddfn" href="#">Distracted Drive Foundation</a> or <a id="txtResponsibily" href="#">TXT Responsibly</a>
 		        	</span> 	
 		        	<span data-bind="visible: displayFacebookPost">
-		        		<br/>
-		        		Let your friends know on <br/> <a href="#" data-icon="facebook" data-role="button" data-bind="click: postResultToFaceBook" data-inline="true">Facebook</a> 		        		
+		        		<a href="#" data-icon="facebook" data-role="button" data-bind="click: postResultToFaceBook" data-inline="true">Post to Facebook</a> 		        		
 		        	</span>     
 		        </div>
 		        
@@ -184,10 +191,11 @@ and open the template in the editor.
                     </ul>
 		        </div>
 		       
-
-	            <a  data-role="button" href="dashboard.html">
-	                    Dashboard
-	            </a>
+				<div data-role="content">
+		            <a  data-role="button" href="dashboard.html">
+		                    Dashboard
+		            </a>
+	            </div>
 
 				<script type="text/javascript">
             		$("#ddfn").click(function(){
@@ -200,5 +208,6 @@ and open the template in the editor.
 		            document.addEventListener("menubutton", settings,true);
 		     </script>
             </div>
+            
     </body>
 </html>

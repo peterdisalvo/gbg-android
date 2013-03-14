@@ -1,4 +1,4 @@
-package com.gbg;
+package com.gbg.driver;
 
 import android.graphics.Color;
 import android.location.Location;
@@ -17,13 +17,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-public class GMActivity extends FragmentActivity implements LocationListener,
-		LocationSource {
-
+public class GMActivity extends FragmentActivity implements LocationListener, LocationSource {
+	static final LatLng USA = new LatLng(39.909736,-98.789062);
 	private GoogleMap map;
-	private OnLocationChangedListener mListener;
+	private OnLocationChangedListener locListener;
 	private LocationManager locationManager;
-	private String TAG = "GMActivity";
+	private String TAG = GMActivity.class.getName();
 	private Location prevLocation;
 	
 	@Override
@@ -39,10 +38,12 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			boolean networkIsEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
 			if (gpsIsEnabled) {
-				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000L, 10F, this);
+				Log.i(TAG, "GPS is enabled");
+				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 10F, this);
 				
 			} else if (networkIsEnabled) {
-				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000L, 10F, this);
+				Log.i(TAG, "GPS is disabled but network is enabled");
+				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000L, 10F, this);
 				
 			} else {
 				// Show an error dialog that GPS is disabled.
@@ -101,25 +102,28 @@ public class GMActivity extends FragmentActivity implements LocationListener,
 			if (map != null) {
 				map.setMyLocationEnabled(true);
 				map.setLocationSource(this);
-				CameraUpdateFactory.newLatLng(new LatLng(39.8282, 98.5795));
+				map.moveCamera(CameraUpdateFactory.newLatLngZoom(USA, 2));
+			} else {
+				Log.e(TAG, "The map is null");
 			}
 		}
 	}
 
 	@Override
 	public void activate(OnLocationChangedListener listener) {
-		mListener = listener;
+		locListener = listener;
 	}
 
 	@Override
 	public void deactivate() {
-		mListener = null;
+		locListener = null;
 	}
 
 	@Override
 	public void onLocationChanged(Location location) {
-		if (mListener != null) {
-			mListener.onLocationChanged(location);
+		Log.e(TAG, "Received location change");
+		if (locListener != null) {
+			locListener.onLocationChanged(location);
 
 			// Move the camera to the user's location once it's available
 			map.animateCamera(CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(
