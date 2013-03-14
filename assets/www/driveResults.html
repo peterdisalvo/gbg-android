@@ -50,8 +50,12 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 			            <!-- --------Max Speed-------- -->
 			            <div  class="ui-block-a">
-			            	<div data-bind="text: myDriveResults.overSpeedLimit" class="my-score results-win">
-			            	</div>
+			            	<!-- ko if: myDriveResults -->
+			            	<div data-bind="text: myDriveResults.overSpeedLimit" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: myDriveResults -->
+			            	<div class="my-score results-win">waiting</div>
+			                <!-- /ko -->
 			            </div>
 			            <div class="ui-block-b">
 			            	<img src="img/max-speed.png"/>
@@ -59,7 +63,12 @@ and open the template in the editor.
 	                         <div>Times over Speed Limit</div>
 			            </div>
 			            <div class="ui-block-c">
-			           		 <div data-bind="text: opponentsResults.overSpeedLimit" class="oppenent-score results-loss">10</div>
+			           		 <!-- ko if: opponentsResults -->
+			            	<div data-bind="text: opponentsResults.overSpeedLimit" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: opponentsResults -->
+			            	<div class="oppenent-score results-win">waiting</div>
+			                <!-- /ko -->
 			            </div>
 		            </div>
 		          </li>
@@ -67,44 +76,77 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 		            <!-- --------Rapid Accel count-------- -->
 		             <div class="ui-block-a">
+		                <!-- ko if: myDriveResults -->
 		            	<div data-bind="text: myDriveResults.fastAccelerations" class="my-score results-win"></div>
+		                <!-- /ko -->
+		                <!-- ko ifnot: myDriveResults -->
+		            	<div class="my-score results-win">waiting</div>
+		                <!-- /ko -->
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/rapid-accel.png"/>
                         <div>Rapid Accel Count</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div data-bind="text: opponentsResults.fastAccelerations" class="oppenent-score results-loss"></div>
+		           		 
+		           		 <!-- ko if: opponentsResults -->
+			            	<div data-bind="text: opponentsResults.fastAccelerations" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: opponentsResults -->
+			            	<div class="oppenent-score results-win">waiting</div>
+			                <!-- /ko -->
 		            </div>
 		           </div>
 		          </li> 
 		           <li data-theme="a drive-result">
 		        	 <div class="ui-grid-b">
 		            <!-- --------Speeding Time-------- -->
-		             <div class="ui-block-a">
+		             <div class="ui-block-a">		  
+		            	<!-- ko if: myDriveResults -->
 		            	<div data-bind="text: myDriveResults.hardBreaks" class="my-score results-win"></div>
+		                <!-- /ko -->
+		                <!-- ko ifnot: myDriveResults -->
+		            	<div class="my-score results-win">waiting</div>
+		                <!-- /ko -->
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/speeding-time.png"/>
                         <div>Hard Breaking</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div data-bind="text: opponentsResults.hardBreaks" class="oppenent-score results-loss"></div>
+		           		 
+		           		  <!-- ko if: opponentsResults -->
+			            	<div data-bind="text: opponentsResults.hardBreaks" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: opponentsResults -->
+			            	<div class="oppenent-score results-win">waiting</div>
+			                <!-- /ko -->
 		            </div>
 		            </div>
 		          </li> 
 		          <li data-theme="a">
 		        	 <div class="ui-grid-b  drive-result">
 		            <!-- --------Distance Traveled-------- -->
-		            <div class="ui-block-a">
+		            <div class="ui-block-a">		 
+		            	<!-- ko if: myDriveResults -->
 		            	<div data-bind="text: myDriveResults.idling" class="my-score results-win"></div>
+		                <!-- /ko -->
+		                <!-- ko ifnot: myDriveResults -->
+		            	<div class="my-score results-win">waiting</div>
+		                <!-- /ko -->
 		            </div>
 		            <div class="ui-block-b">
 		            	<img src="img/distance-travelled.png"/>
                         <div>Idling More than 5 minutes</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div data-bind="text: opponentsResults.idling"  class="oppenent-score results-loss"></div>
+		           		
+		           		 <!-- ko if: opponentsResults -->
+			            	<div data-bind="text: opponentsResults.idling" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: opponentsResults -->
+			            	<div class="oppenent-score results-win">waiting</div>
+			                <!-- /ko -->
 		            </div>
 		              </div>
 		          </li> 
@@ -112,14 +154,25 @@ and open the template in the editor.
 		        	 <div class="ui-grid-b drive-result">
 		            <!-- --------Time Traveled-------- -->
 		            <div class="ui-block-a">
-		            	<div data-bind="text: myDriveResults.timesTexting" class="my-score results-win">10</div>
+		            	<!-- ko if: myDriveResults -->
+		            	<div data-bind="text: myDriveResults.timesTexting" class="my-score results-win"></div>
+		                <!-- /ko -->
+		                <!-- ko ifnot: myDriveResults -->
+		            	<div class="my-score results-win">waiting</div>
+		            	
+		                <!-- /ko -->
 		            </div>
 		            <div class="ui-block-b">
 		            	 <img src="img/trip-time.png"/>
                           <div>Times Texting While Driving</div>
 		            </div>
 		            <div class="ui-block-c">
-		           		 <div data-bind="text: opponentsResults.timesTexting" class="oppenent-score results-loss">10</div>
+		           		 <!-- ko if: opponentsResults -->
+			            	<div data-bind="text: opponentsResults.timesTexting" class="my-score results-win"></div>
+			                <!-- /ko -->
+			                <!-- ko ifnot: opponentsResults -->
+			            	<div class="oppenent-score results-win">waiting</div>
+			                <!-- /ko -->
 		            </div>
 		           </div>
 		          </li>

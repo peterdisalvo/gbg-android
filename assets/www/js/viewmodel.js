@@ -80,6 +80,13 @@ var racerResults = {
      self.computeResult = function(){
     	var score =0;
     	var opponentScore =0;
+    	
+    	if (!self.myDriveResults || !self.opponentsResults){
+    		self.result = "are waiting";
+    		self.displayFacebookPost = false;
+    		return;
+    	}
+    	
     	if (self.myDriveResults.overSpeedLimit < self.opponentsResults.overSpeedLimit)
 		{
     		score++;

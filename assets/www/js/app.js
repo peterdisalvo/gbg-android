@@ -53,6 +53,13 @@ $('#dashboard').live('pageshow', function(event) {
 	    resultsModel.opponentsResults = speedyResults;	
 	    resultsModel.computeResult();
 	});
+	$('[data-waiting="waiting"]').click(function(){
+		resultsModel = new ResultsModel;
+		resultsModel.myDriveResults = hardBrakesResults;
+	    resultsModel.opponentsResults = null;	
+	    resultsModel.computeResult();
+	});
+	
 });
 
 $('#currentDrive').live('pageshow', function(event) {
