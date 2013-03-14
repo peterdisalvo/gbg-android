@@ -42,7 +42,25 @@ var racerResults = {
      self.displayCharityLinks =  ko.observable(false) ;
      self.displayFacebookPost =  ko.observable(true) ;
      self.postResultToFaceBook = function(){
-    	 alert("fake post right now");
+    	 var msg = "Do you GBG?";
+    	 if (self.result == "won"){
+    		 msg+= " I just won a challenge!";
+    	 }
+    	 else if (self.result == "lost")
+         {
+    		 msg+= " I just donated a dollar to a charity to promote safe driving habits. Texting and driving isn't cool.";
+         }
+    	 
+    	 msg+="  www.greenbuttongamer.com";    	 
+    	 facebookConnect.post(msg, function(result) {
+		    console.log("FacebookConnect.post:" + JSON.stringify(result));
+			
+		    // Check for cancellation/error
+		    if(result.cancelled || result.error) {
+		        console.log("FacebookConnect.post:failedWithError:" + result.message);
+		        return; 
+		    }
+	 	});
      };
      self.computeResult = function(){
     	var score =0;
