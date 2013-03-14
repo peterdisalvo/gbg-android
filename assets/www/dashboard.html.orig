@@ -33,7 +33,7 @@ and open the template in the editor.
                     <li data-theme="a">
                         <a data-geolocation="startWatch" href="currentDrive.html" data-transition="slide">
                                 <img src="img/james.png"> 
-                               	<p class="opponent">James</p>
+                               	<p><font weight="bold" size="4">James</font></p>
                                	<p><font size="2" color="#32FF32">2 Wins</font></p>
                                	<p><font size="2" color="#FF6453">3 Losses</font></p>                         
                                 <span  class="challenge-state drive">Drive!</span>
@@ -42,19 +42,24 @@ and open the template in the editor.
                      <li data-theme="a">
                         <a data-waiting="waiting"  href="driveResults.html" data-transition="slide">
                                 <img src="img/peter.png">
-                                <p class="opponent">Pete</p>
+                                <p><font weight="bold" size="4">Pete</font></p>
                                	<p><font size="2" color="#32FF32">4 Wins</font></p>
                                	<p><font size="2" color="#FF6453">2 Losses</font></p>   
                                 <span  class="challenge-state waiting">Waiting for Pete</span>
                         </a>
                     </li>
                      <li data-theme="a">
+<<<<<<< Updated upstream
                         <a data-waiting="lost" href="driveResults.html" data-transition="slide">
-                            <img src="img/adam95.png">
                             <p class="opponent">Adam</p>
+=======
+                        <a href="#page1" data-transition="slide">
+>>>>>>> Stashed changes
+                            <img src="img/adam.png">
+                            <p><font weight="bold" size="4">James</font></p>
                             <p><font size="2" color="#32FF32">0 Wins</font></p>
                             <p><font size="2" color="#FF6453">4 Losses</font></p>   
-                             <span  class="challenge-state loss">You Lost!</span>
+                             <span  class="challenge-state loss">You Lost! Pay up.</span>
                         </a>
                     </li>
                     <li data-theme="a">
@@ -66,7 +71,7 @@ and open the template in the editor.
                 </ul>
                 <ul id="dashboard-challenges" data-role="listview" data-divider-theme="a" data-inset="true">
                 	<li data-role="list-divider" role="heading">
-                       Tips
+                       My Suggestions
                     </li>
                     <li data-theme="a">
                           Make your commute easier, leave 15 minutes earlier.  
@@ -76,7 +81,7 @@ and open the template in the editor.
                     </li> -->
                     <li data-theme="a">
                         <a href="mySuggestions.html" data-transition="slide">
-                           View All Tips
+                           View All Suggestions
                         </a>
                     </li>
                 </ul>

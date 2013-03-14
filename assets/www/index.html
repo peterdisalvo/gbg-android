@@ -48,7 +48,7 @@
                     </div>
                     
                     <input id="login" type="submit" value="Log In" />
-                    <a data-role="button" data-icon="facebook" onClick="loginWithFacebook()">
+                    <a data-role="button" data-theme="a" data-icon="facebook" onClick="loginWithFacebook()">
                      Or Log In with Facebook
                		</a>
                		
@@ -98,7 +98,9 @@
          <script src="js/knockout-2.2.1.js"></script>
          <script src="js/viewmodel.js"></script>
          <script type="text/javascript">
-
+				var username;
+				var firstname;
+				
         		$(function (){
          			$("#login").submit(function(){
          				var un =  $("#username").val();
@@ -114,6 +116,8 @@
         					return false;
         				}
          				*/
+         				username = un;
+         				firstname = un;
          			});
          		});
          		
@@ -131,6 +135,10 @@
 	       			        return; 
 	       			    }
 	       			    
+	       			    username = result.username;
+	       			    firstname = result.first_name;
+	       			 	console.log("username: " + username + ", firstname: " + firstname);
+	       			 	
 		       			/*facebookConnect.post("Do you GBG?  www.greenbuttongamer.com", function(result) {
 		       			    console.log("FacebookConnect.post:" + JSON.stringify(result));
 		       				

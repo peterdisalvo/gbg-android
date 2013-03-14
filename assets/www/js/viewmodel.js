@@ -134,11 +134,11 @@ var racerResults = {
     	  	
     	if(score > opponentScore)
 		{
-    		self.result = "won";
+    		self.result = "WON";
 		}
     	else if (score < opponentScore)
     	{
-    		self.result = "lost";
+    		self.result = "LOST";
     		self.displayCharityLinks(true);
     	} 
     	else
